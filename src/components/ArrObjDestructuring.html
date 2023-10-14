@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const alphabets = ["Ram", "Shyam", "Hari", "Sita", "Gita"];
+      //   const numbers = [1, 2, 3, 4, 5, 6];
+      //   //   const a = alphabets[0];
+      //   //   console.log(a);
+
+      //   const [a, , c, ...rest] = alphabets;
+      //   console.log(c);
+      //   console.log(rest);
+
+      //   const newArray = [...alphabets, ...numbers];
+      //   console.log(newArray);
+
+      //   function sumAndMultiply(a, b) {
+      //     return [a + b, a * b];
+      //   }
+      //   const [x, y = "No multi when not in retun value"] = sumAndMultiply(5, 4);
+      //   console.log(y);
+
+      const person1 = {
+        name: "Ram",
+        // age: 32,
+        role: "Admin",
+        address: {
+          city: "Kathmandu",
+          state: "Bagmati",
+        },
+      };
+
+      const { name: firstName, age = 15, ...rest } = person1;
+      console.log(firstName);
+      console.log(age);
+      console.log(rest);
+
+      const {
+        address: { city },
+      } = person1;
+      console.log(city);
+
+      person2 = {
+        name: "Jerry",
+      };
+
+      const personCombinedOverride = { ...person1, ...person2 };
+      console.log(personCombinedOverriden);
+    </script>
+  </body>
+</html>
